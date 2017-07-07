@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
 //create constructor
 class ItemSlot extends Component {
@@ -10,11 +11,11 @@ class ItemSlot extends Component {
   //create
 
 
-  render(){
-    return(
-
-    )
-  }
+  // render(){
+  //   return(
+  //
+  //   )
+  // }
 
   }
 
