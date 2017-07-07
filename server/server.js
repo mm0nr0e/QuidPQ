@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });                    
 
 app.post('/login', userController.verifyUser, cookieController.setSSIDCookie, sessionController.startSession, (req, res) => {
-  
+  res.redirect('/')
 });
 
 app.get('/signup', (req, res) => {
@@ -33,7 +33,7 @@ app.get('/signup', (req, res) => {
 });
 
 app.post('/signup', userController.createUser, cookieController.setSSIDCookie, sessionController.startSession, (req, res) => {
-
+  res.redirect('/' + res.body.username);
 });
 
 app.get('/collection/:user', userController.isLoggedIn, itemController.getUserItems, messageController.getMessages, userController.isPageUser, (req, res) => {
