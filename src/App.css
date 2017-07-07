@@ -16,7 +16,7 @@
 }
 
 .shelf {
-  border-width: thick;
+  border-width: 2px, solid;
   border-top: none;
   width: 45%;
   height: 40px;

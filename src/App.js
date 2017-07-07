@@ -3,8 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBar from './searchBar.js'
 import Inventory from './inventory.js'
-import Shelf from './shelf.js'
-import ItemSlot from './itemSlot.js'
+
 
 class App extends Component {
   render() {
