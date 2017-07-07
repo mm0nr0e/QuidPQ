@@ -1,12 +1,19 @@
 {
-  "name": "QuidPQ",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+
+  "name": "quidpq",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
   "scripts": {
-    "start": "node server/server.js",
-    //"start": "export NODE_ENV=development; nodemon server/server.js",
-    "webpack": "./node_modules/.bin/webpack -w"
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test --env=jsdom",
+  "eject": "react-scripts eject"
+  "webpack": "./node_modules/.bin/webpack -w"
   },
   "repository": {
     "type": "git",
