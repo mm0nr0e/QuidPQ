@@ -36,7 +36,7 @@ app.post('/signup', userController.createUser, cookieController.setSSIDCookie, s
   res.redirect('/' + res.body.username);
 });
 
-app.get('/collection/:user', sessionController.isLoggedIn, itemController.getUserItems, messageController.getMessages, userController.isPageUser, (req, res) => {
+app.get('/collection/:user', sessionController.isLoggedIn, itemController.getUserItems, messageController.getUserMessages, userController.isPageUser, (req, res) => {
   // render user's page
 });
 
@@ -49,7 +49,7 @@ app.post('/mycollection/:user', itemController.addNewItem, (req, res) => {
   // if valid, render user page with that users stuff from db
 });
 
-app.post('/messages/:user', messageController.addMessages, (req, res) => {
+app.post('/messages/:user', messageController.sendMessage, (req, res) => {
   // check if user is a valid user
   // check if a different user is signed in
   // if both :) , add a message to db with to: and from: props

@@ -10,9 +10,9 @@ class App extends Component {
     super(props);
     
     this.state = {
-      items: [],
+      products: [],
       username: 'string',
-      messages: []
+      messages: [] 
     };
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
         </div>
         <div>
           <SearchBar />
-          <Inventory products={this.props.products} /> {/* will need Hai's input here*/}
+          <Inventory products={this.state.products} /> {/* will need Hai's input here*/}
         </div>
       </div>
     );

@@ -15,7 +15,7 @@ class Inventory extends Component {
        //include shelves
       <div>
         <SearchBar />
-        <Box />
+        <Box items={this.props.items}/>
         <TradeBtn />
       </div>
      );
