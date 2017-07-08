@@ -37,11 +37,11 @@ app.post('/signup', userController.createUser, cookieController.setSSIDCookie, s
 });
 
 app.get('/collection/:user', sessionController.isLoggedIn, itemController.getUserItems, messageController.getMessages, userController.isPageUser, (req, res) => {
-
+  // render user's page
 });
 
 app.get('/mycollection/:user', (req, res) => {
-
+  // render user's own page
 });
 
 app.post('/mycollection/:user', itemController.addNewItem, (req, res) => {

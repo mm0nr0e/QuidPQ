@@ -4,10 +4,10 @@ const sessionController = {};
 
 sessionController.isLoggedIn = (req, res, next) => {
   if (!req.cookies.ssid) res.redirect('/signup');
-  Session.findOne({ cookieId: req.cookies.ssid }, (err, cookie) => {
+  Session.findOne({ cookieId: req.cookies.ssid }, (err) => {
     if (err) res.redirect('/login');
     next();
-  }
+  };
 };
 
 sessionController.startSession = (req, res, next) => {
