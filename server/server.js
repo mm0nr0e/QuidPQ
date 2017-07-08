@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const userController = require('./../user/userController');
 const itemController = require('./../item/itemController');
-const messageController = require('./../message/messageController');
+const messageController = require('./../message/msgController');
 const sessionController = require('./../session/sessionController');
 const cookieController = require('./../util/cookieController');
 

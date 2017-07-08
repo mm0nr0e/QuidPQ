@@ -2,11 +2,11 @@ const Session = require('./sessionModel');
 
 const sessionController = {};
 
-sessionController.isLoggedIn = () => {
+sessionController.isLoggedIn = (req, res, next) => {
 
 };
 
-sessionController.startSession = () => {
+sessionController.startSession = (req, res, next) => {
 
 };
 
