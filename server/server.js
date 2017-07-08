@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 
 const userController = require('./../user/userController');
 const itemController = require('./../item/itemController');
@@ -12,8 +13,7 @@ const cookieController = require('./../util/cookieController');
 
 const app = express();
 
-const mongoURI = 'mongodb://localhost/quidPq';
-mongoose.connect(mongoURI);
+mongoose.connect('mongodb://quidpq:quidpq@ds147842.mlab.com:47842/quidpq');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -36,7 +36,7 @@ app.post('/signup', userController.createUser, cookieController.setSSIDCookie, s
   res.redirect('/' + res.body.username);
 });
 
-app.get('/collection/:user', userController.isLoggedIn, itemController.getUserItems, messageController.getMessages, userController.isPageUser, (req, res) => {
+app.get('/collection/:user', sessionController.isLoggedIn, itemController.getUserItems, messageController.getMessages, userController.isPageUser, (req, res) => {
 
 });
 
